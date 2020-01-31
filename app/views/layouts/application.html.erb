@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+  <head>
+    <title>インターネット交通事故</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta property="og:title" content="インターネット交通事故" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= root_url %>" />
+    <meta property="og:description" content="インターネット交通事故の件数を掲載しています。" />
+    <meta property="og:site_name" content="インターネット交通事故" />
+    <meta property="og:image" content="<%= root_url %>ogp.png" />
+  </head>
+
+  <body>
+    <% flash.each do |message_type, message| %>
+      <span class="flash flash-<%= message_type %>"><%= message %></span>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

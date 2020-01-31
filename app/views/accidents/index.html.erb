@@ -1,0 +1,14 @@
+<h2>インターネット交通事故</h2>
+今日 <br>
+死亡: <%= @today_accident.dead %> <br>
+負傷: <%= @today_accident.injured %><br>
+<br>
+昨日 <br>
+死亡: <%= @yesterday_accident.dead %> <br>
+負傷: <%= @yesterday_accident.injured %><br>
+
+
+<%= link_to "死亡した", accidents_path(status:"dead"), method: :post %>
+<%= link_to "負傷した", accidents_path(status:"injured"), method: :post %>
+<br>
+<%= tweet_link "ツイートする",  @tweet_text %>
